@@ -27,10 +27,25 @@ Requirements:
 
 
 12. After successfully logged-in
-    > Go to Manage Jenkins
+> Go to Manage Jenkins 
+> Now search for in process script approval need to approve the script in order to run our job
+![Alt text](images/1.png?raw=true "Get")
 
+
+![Alt text](images/2.png?raw=true "Get")
+
+13. Now it's time to run the job
+
+14. After successfull job run, pipeline view
+
+![Alt text](images/3.png?raw=true "Get")
+
+#Tips
 > Local Helm chart is pre-configured with JCasc job and dependencies and also for the job project configure from this repo https://github.com/mendix/pluggable-widgets-typing-generator
 
 > the workers are dynamically created on-demand in kubernetes as a pod
 
 > All changes for this deployment are in jenkins/values.yaml
+  1. Changes for minikube deployment https://github.com/janavenkat/jenkin/blob/213245f536efaf2b94dfab4cfe35e0dbcd592196/jenkins/values.yaml#L93
+  2. JcasC changes https://github.com/janavenkat/jenkin/blob/213245f536efaf2b94dfab4cfe35e0dbcd592196/jenkins/values.yaml#L206
+  3. Pipeline job configuration https://github.com/janavenkat/jenkin/blob/213245f536efaf2b94dfab4cfe35e0dbcd592196/jenkins/values.yaml#L234
