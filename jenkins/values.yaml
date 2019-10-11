@@ -213,7 +213,7 @@ master:
       welcome-messages: |
         jenkins:
           systemMessage: Welcome to MENDIX CI\CD server.  This Jenkins is configured and managed 'as code'.
-      welcome-ddsds: |
+      tools-config: |
           tool:
             nodejs:
               defaultProperties:
@@ -230,12 +230,10 @@ master:
                     - nodeJSInstaller:
                         id: "12.4.0"
                         npmPackagesRefreshHours: 72
-      welcome-dummy: |
+      pipeline-config: |
         jobs:
           - script: >
-              folder('testjobs')
-          - script: >
-              pipelineJob('testjobs/default-agent') {
+              pipelineJob('Mendix Pipeline') {
                 definition {
                   cps {
                     script("""\

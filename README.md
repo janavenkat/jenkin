@@ -1,6 +1,7 @@
 Setup Jenkins with JCasc on top Kubernetes
 
 Requirements:
+
     - Minikube
         - Virtualbox or KVM
     - Kubectl
@@ -10,7 +11,11 @@ Requirements:
 1. Follow this official guide to deploy Minikube locally https://kubernetes.io/docs/tasks/tools/install-minikube/
 2. `minikube start --cpus 2 --memory 4000`
 3. After up and running you can find the kubeconfig file in ~/.kube/config
-4. `kubectl get pods`
+4. `minikube status` make sure all components are up and running
+
+    `git clone https://github.com/janavenkat/jenkin.git`
+
+    `cd jenkin`
 5. `helm init`
 6. `helm install --name jenkins jenkins/.`
 7.  Get credentials for jenkins. 
@@ -26,8 +31,9 @@ Requirements:
 11. Enter your minikube ip with port example `http://192.168.99.100:31995`
 
 
-12. After successfully logged-in
+12. After successfully logged-in have to approve our script to run our job
 > Go to Manage Jenkins 
+
 > Now search for in process script approval need to approve the script in order to run our job
 ![Alt text](images/1.png?raw=true "Get")
 
@@ -49,3 +55,8 @@ Requirements:
   1. Changes for minikube deployment https://github.com/janavenkat/jenkin/blob/213245f536efaf2b94dfab4cfe35e0dbcd592196/jenkins/values.yaml#L93
   2. JcasC changes https://github.com/janavenkat/jenkin/blob/213245f536efaf2b94dfab4cfe35e0dbcd592196/jenkins/values.yaml#L206
   3. Pipeline job configuration https://github.com/janavenkat/jenkin/blob/213245f536efaf2b94dfab4cfe35e0dbcd592196/jenkins/values.yaml#L234
+
+
+
+#Additional one deployed on GKE k8's
+> Password is encrypted like kubernetes secret you know how to use :) it 
