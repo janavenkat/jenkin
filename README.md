@@ -40,7 +40,7 @@ Requirements and tested on these versions:
 
 10. Enter your minikube ip with port example `http://192.168.99.100:31995`
 11. Get credentials for jenkins.
- 
+
     username: ` admin`
 
     to get the password execute this command
@@ -64,7 +64,7 @@ Requirements and tested on these versions:
 
 ![Alt text](images/3.png?raw=true "Get")
 
-#Tips
+#Information
 > Local Helm chart is pre-configured with JCasc job and dependencies and also for the job project configure from this repo https://github.com/mendix/pluggable-widgets-typing-generator
 
 > the workers are dynamically created on-demand in kubernetes as a pod
