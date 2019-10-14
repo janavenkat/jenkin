@@ -179,8 +179,9 @@ master:
   enableRawHtmlMarkupFormatter: false
   # Used to approve a list of groovy functions in pipelines used the script-security plugin. Can be viewed under /scriptApproval
   scriptApproval:
-  #  - "method groovy.json.JsonSlurperClassic parseText java.lang.String"
-  #  - "new groovy.json.JsonSlurperClassic"
+   - "method groovy.json.JsonSlurperClassic parseText java.lang.String groovy"
+   - "new groovy.json.JsonSlurperClassic"
+   - "method org.jenkinsci.plugins.workflow.support.actions.EnvironmentAction getEnvironment"
   # List of groovy init scripts to be executed during Jenkins master start
   initScripts:
   #  - |
